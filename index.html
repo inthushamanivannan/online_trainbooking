@@ -13,7 +13,260 @@
 <body>
 
     <!-- Navigation Bar -->
+         <header>
 
+        <nav class="navbar">
+
+            <div class="logo">
+                <h2>RailBook</h2>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#search">Book Tickets</a></li>
+                <li><a href="#routes">Routes</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="pages/login.html" class="login-btn">Login</a>
+                <a href="pages/register.html" class="register-btn">Register</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h1>Travel Smarter with RailBook</h1>
+
+                <p>
+                    Book your train tickets easily.
+                    Explore destinations and enjoy a comfortable journey.
+                </p>
+
+                <a href="#search" class="hero-btn">Book Your Journey</a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Train Search Section -->
+        <section class="search-section" id="search">
+
+            <h2>Find Your Train</h2>
+
+            <p>Search for available trains and book your tickets.</p>
+
+            <form id="train-search-form">
+
+                <div class="form-group">
+
+                    <label for="from">From Station</label>
+
+                    <select id="from" name="from" required>
+
+                        <option value="">Select Departure</option>
+
+                        <option value="COL">Colombo Fort</option>
+                        <option value="GAM">Gampaha</option>
+                        <option value="VAV">Vavuniya</option>
+                        <option value="JAF">Jaffna</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="to">To Station</label>
+
+                    <select id="to" name="to" required>
+
+                        <option value="">Select Destination</option>
+
+                        <option value="COL">Colombo Fort</option>
+                        <option value="GAM">Gampaha</option>
+                        <option value="VAV">Vavuniya</option>
+                        <option value="JAF">Jaffna</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="travel-date">Travel Date</label>
+
+                    <input
+                        type="date"
+                        id="travel-date"
+                        name="travelDate"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="passengers">Passengers</label>
+
+                    <select id="passengers" name="passengers">
+
+                        <option value="1">1 Passenger</option>
+                        <option value="2">2 Passengers</option>
+                        <option value="3">3 Passengers</option>
+                        <option value="4">4 Passengers</option>
+                        <option value="5">5 Passengers</option>
+                        <option value="6">6 Passengers</option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="submit" class="search-btn">
+                    Search Trains
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Features Section -->
+        <section class="features" id="about">
+
+            <h2>Why Choose RailBook?</h2>
+
+            <div class="feature-container">
+
+                <div class="feature-card">
+
+                    <h3>Easy Booking</h3>
+
+                    <p>
+                        Book your train tickets quickly
+                        through our online platform.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>Train Schedules</h3>
+
+                    <p>
+                        Explore train schedules and
+                        available travel options.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>Secure Booking</h3>
+
+                    <p>
+                        Manage your bookings through
+                        your personal account.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>Booking History</h3>
+
+                    <p>
+                        View and manage your previous
+                        train ticket reservations.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Popular Routes Section -->
+        <section class="routes" id="routes">
+
+            <h2>Popular Train Routes</h2>
+
+            <div class="route-container">
+
+                <div class="route-card">
+
+                    <h3>Colombo → Jaffna</h3>
+
+                    <p>Explore the Northern Province.</p>
+
+                </div>
+
+
+                <div class="route-card">
+
+                    <h3>Colombo → Kandy</h3>
+
+                    <p>Enjoy the beautiful hill country.</p>
+
+                </div>
+
+
+                <div class="route-card">
+
+                    <h3>Colombo → Galle</h3>
+
+                    <p>Discover the southern coastline.</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>RailBook</h2>
+
+            <p>
+                Your journey begins with us.
+                Book your train tickets anytime, anywhere.
+            </p>
+
+            <p>
+                &copy; 2026 RailBook. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 
