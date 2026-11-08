@@ -46,10 +46,15 @@ header {
     max-width: 1200px;
     margin: auto;
     padding: 18px 25px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+    color: #12376a;
+    font-size: 27px;
+    font-weight: 800;
 }
 
 .logo h2 {
@@ -362,7 +367,96 @@ footer {
 
 
 /* =========================
-   8. RESPONSIVE DESIGN
+   8. TRAIN SEARCH RESULTS
+========================= */
+
+.search-results {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px 25px;
+}
+
+.search-results h1 {
+    color: #12376a;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+#journey-details {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    line-height: 2;
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#train-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.train-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.train-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+.train-card h2 {
+    color: #12376a;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.train-card p {
+    margin: 12px 0;
+    color: #475569;
+    font-size: 14px;
+}
+
+.train-card button {
+    background: #f28c28;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.train-card button:hover {
+    background: #d97514;
+}
+
+.search-results > a {
+    display: inline-block;
+    margin-top: 30px;
+    color: #12376a;
+    font-weight: 500;
+}
+
+.search-results > a:hover {
+    color: #f28c28;
+}
+
+
+/* =========================
+   9. RESPONSIVE DESIGN
 ========================= */
 
 @media (max-width: 900px) {
@@ -377,6 +471,10 @@ footer {
     }
 
     #train-search-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #train-list {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -412,8 +510,260 @@ footer {
     }
 
     .feature-container,
-    .route-container {
+    .route-container,
+    #train-list {
         grid-template-columns: 1fr;
     }
 
+    .search-results {
+        margin: 25px auto;
+        padding: 15px;
+    }
+
+    .search-results h1 {
+        font-size: 27px;
+    }
+    /* =========================
+   10. BOOKING PAGE
+========================= */
+
+.booking-section {
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 25px;
+}
+
+.booking-section h1 {
+    color: #12376a;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.booking-subtitle {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.booking-train-details {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 25px;
+}
+
+.booking-train-details h2 {
+    color: #12376a;
+    margin-bottom: 15px;
+}
+
+.booking-train-details p {
+    margin: 8px 0;
+}
+
+#booking-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+#booking-form h2 {
+    color: #12376a;
+    margin-bottom: 25px;
+}
+
+.booking-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.booking-form-group label {
+    font-weight: 600;
+    color: #334155;
+}
+
+.booking-form-group input {
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.booking-form-group input:focus {
+    outline: none;
+    border-color: #f28c28;
+}
+
+.total-price {
+    background: #f0f4f8;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+}
+
+.total-price h3 {
+    color: #12376a;
+}
+
+#total-price {
+    color: #f28c28;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.confirm-booking-btn {
+    width: 100%;
+    padding: 15px;
+    background: #f28c28;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.confirm-booking-btn:hover {
+    background: #d97514;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #12376a;
+}
+
+@media (max-width: 600px) {
+
+    .booking-section {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    #booking-form {
+        padding: 20px;
+    }
+
+}
+/* =========================
+   11. BOOKING CONFIRMATION
+========================= */
+
+.confirmation-section {
+    max-width: 750px;
+    margin: 60px auto;
+    padding: 25px;
+    text-align: center;
+}
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+    background: #16a34a;
+    color: white;
+    border-radius: 50%;
+    font-size: 45px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation-section h1 {
+    color: #12376a;
+    margin-bottom: 10px;
+}
+
+.confirmation-section > p {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.confirmation-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.confirmation-card h2 {
+    color: #12376a;
+    margin-bottom: 20px;
+}
+
+.confirmation-card p {
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+}
+
+.home-btn {
+    display: inline-block;
+    background: #f28c28;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 7px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.home-btn:hover {
+    background: #d97514;
+}
+/* =========================
+   12. MY BOOKINGS PAGE
+========================= */
+
+.my-bookings-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 25px;
+}
+
+.my-bookings-section h1 {
+    color: #12376a;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.my-bookings-section > p {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.my-booking-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.my-booking-card h2 {
+    color: #12376a;
+    margin-bottom: 15px;
+}
+
+.my-booking-card p {
+    margin: 8px 0;
+    color: #475569;
+}
+
+.no-bookings {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: #64748b;
+}
 }

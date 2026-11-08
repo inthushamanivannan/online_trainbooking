@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Tickets | RailBook</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header class="navbar">
+
+        <div class="logo">RailBook</div>
+
+        <nav>
+            <a href="my-bookings.html">My Bookings</a>
+            <a href="../index.html">Home</a>
+            <a href="trains.html">Book Tickets</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Booking Section -->
+
+    <section class="booking-section">
+
+        <h1>Complete Your Booking</h1>
+
+        <p class="booking-subtitle">
+            Enter your details to reserve your train tickets.
+        </p>
+
+
+        <!-- Selected Train Details -->
+
+        <div class="booking-train-details">
+
+            <h2>Selected Train</h2>
+
+            <p id="selected-train">Train Name</p>
+
+            <p id="selected-price">Ticket Price: Rs. 0</p>
+
+        </div>
+
+
+        <!-- Passenger Form -->
+
+        <form id="booking-form">
+
+            <h2>Passenger Details</h2>
+
+            <div class="booking-form-group">
+
+                <label for="passenger-name">Full Name</label>
+
+                <input
+                    type="text"
+                    id="passenger-name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="booking-form-group">
+
+                <label for="nic">NIC Number</label>
+
+                <input
+                    type="text"
+                    id="nic"
+                    placeholder="Enter your NIC number"
+                    required
+                >
+
+            </div>
+
+
+            <div class="booking-form-group">
+
+                <label for="phone">Phone Number</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+
+            </div>
+
+
+            <div class="booking-form-group">
+
+                <label for="email">Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="booking-form-group">
+
+                <label for="seat-count">Number of Seats</label>
+
+                <input
+                    type="number"
+                    id="seat-count"
+                    min="1"
+                    max="5"
+                    value="1"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Total Price -->
+
+            <div class="total-price">
+
+                <h3>Total Price</h3>
+
+                <p id="total-price">Rs. 0</p>
+
+            </div>
+
+
+            <button type="submit" class="confirm-booking-btn">
+                Confirm Booking
+            </button>
+
+        </form>
+
+        <a href="trains.html" class="back-link">
+            ← Back to Trains
+        </a>
+
+    </section>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
